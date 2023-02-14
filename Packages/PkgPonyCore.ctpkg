@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="PkgPonyCore"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <Libraries Value="../../../Library/$(TargetCPU)-$(TargetOS)-$(LCLWidgetType)"/>
+        <OtherUnitFiles Value="../Sources/Core"/>
+        <UnitOutputDirectory Value="../../../Library/$(TargetCPU)-$(TargetOS)-$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <Verbosity>
+          <ShowAll Value="True"/>
+          <ShowDebugInfo Value="True"/>
+        </Verbosity>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Pony Framework Package"/>
+    <Files>
+      <Item>
+        <Filename Value="../Sources/Core/PonyCore.pas"/>
+        <UnitName Value="PonyCore"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Core/PonyCoreGroup.pas"/>
+        <UnitName Value="PonyCoreGroup"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Core/PonyCoreGroupContract.pas"/>
+        <UnitName Value="PonyCoreGroupContract"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Core/PonyConstants.pas"/>
+        <UnitName Value="PonyConstants"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Core/PonyCoreInstances.pas"/>
+        <UnitName Value="PonyCoreInstances"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="PkgPonyCoreRoute"/>
+      </Item>
+      <Item>
+        <PackageName Value="PkgPonyCoreRouter"/>
+      </Item>
+      <Item>
+        <PackageName Value="PkgPonyRTTI"/>
+      </Item>
+      <Item>
+        <PackageName Value="PkgPonyErrors"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

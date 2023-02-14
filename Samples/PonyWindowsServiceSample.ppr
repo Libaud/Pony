@@ -1,0 +1,16 @@
+{=============================================================================
+ Project : Pony windows Service Sample
+ Author : Frédéric Libaud
+ Description : Pony framework implementation for Windows Service
+ Features:
+
+ =============================================================================
+ History
+ -----------------------------------------------------------------------------
+ 08/02/2022 - Forking code from Horse framework
+ =============================================================================}
+program PonyWindowsServiceSample;
+
+{$I PonyWindowsServiceSample.inc}
+
+

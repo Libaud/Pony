@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="PkgPonyParams"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <Libraries Value="../../../Library/$(TargetCPU)-$(TargetOS)-$(LCLWidgetType)"/>
+        <OtherUnitFiles Value="../Sources/CoreParam"/>
+        <UnitOutputDirectory Value="../../../Library/$(TargetCPU)-$(TargetOS)-$(LCLWidgetType)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Pony Framework Package"/>
+    <Files>
+      <Item>
+        <Filename Value="../Sources/CoreParam/PonyCoreParam.pas"/>
+        <UnitName Value="PonyCoreParam"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/CoreParam/PonyCoreParamConfig.pas"/>
+        <UnitName Value="PonyCoreParamConfig"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/CoreParam/PonyCoreParamField.pas"/>
+        <UnitName Value="PonyCoreParamField"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/CoreParam/PonyCoreParamFieldBrackets.pas"/>
+        <UnitName Value="PonyCoreParamFieldBrackets"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/CoreParam/PonyCoreParamHeader.pas"/>
+        <UnitName Value="PonyCoreParamHeader"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="PkgPonyRTTI"/>
+      </Item>
+      <Item>
+        <PackageName Value="PkgPonyErrors"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <MultiProject FileVersion="1">
+    <Elements Count="20">
+      <Element0 FileName="Packages/PkgPonyBase.ctpkg"/>
+      <Element1 FileName="Packages/PkgPonyErrors.ctpkg"/>
+      <Element2 FileName="Packages/PkgPonyParams.ctpkg"/>
+      <Element3 FileName="Packages/PkgPonyRTTI.ctpkg"/>
+      <Element4 FileName="Packages/PkgPonyBaseHTTP.ctpkg"/>
+      <Element5 FileName="Packages/PkgPonyCoreRouter.ctpkg"/>
+      <Element6 FileName="Packages/PkgPonyCoreRoute.ctpkg"/>
+      <Element7 FileName="Packages/PkgPonyCore.ctpkg"/>
+      <Element8 FileName="Packages/PkgPonyImplementationBase.ctpkg"/>
+      <Element9 FileName="Packages/PkgPonyModules.ctpkg"/>
+      <Element10 FileName="Packages/PkgPonyApacheImpl.ctpkg"/>
+      <Element11 FileName="Packages/PkgPonyDaemonImpl.ctpkg"/>
+      <Element12 FileName="Packages/PkgPonyConsoleImpl.ctpkg"/>
+      <Element13 FileName="Packages/PkgPonyCGIImpI.ctpkg"/>
+      <Element14 FileName="Packages/PkgPonyFastCGIImpl.ctpkg"/>
+      <Element15 FileName="Packages/PkgPonyISAPIImpl.ctpkg"/>
+      <Element16 FileName="Packages/PkgPonyHTTPImpl.ctpkg"/>
+      <Element17 FileName="Packages/PkgPonySSLImpl.ctpkg"/>
+      <Element18 FileName="Packages/PkgPonyWindowsServicesImpl.ctpkg"/>
+      <Element19 FileName="Samples.ctmpr"/>
+    </Elements>
+  </MultiProject>
+</CONFIG>

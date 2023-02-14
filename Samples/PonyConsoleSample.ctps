@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="PonyConsoleSample.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <CursorPos Y="12"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="PonyConsoleSample.inc"/>
+        <FRMtype Value="0"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="12"/>
+        <CursorPos X="4" Y="32"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="PonyApacheSample.ppr"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="15" Y="14"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="PonyApacheSample.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <CursorPos Y="16"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="5">
+      <Position>
+        <Filename Value="PonyApacheSample.ppr"/>
+        <Caret Line="14" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="PonyConsoleSample.inc"/>
+        <Caret Line="4" Column="76" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="PonyConsoleSample.inc"/>
+        <Caret Line="21" Column="64"/>
+      </Position>
+      <Position>
+        <Filename Value="PonyConsoleSample.inc"/>
+        <Caret Line="46" Column="10" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="PonyConsoleSample.inc"/>
+        <Caret Line="23" Column="82" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="PonyConsoleSample.inc"/>
+        <Caret Line="36" Column="3" TopLine="11"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

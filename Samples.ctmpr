@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <MultiProject FileVersion="1">
+    <Elements Count="9">
+      <Element0 FileName="Samples/PonyApacheSample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element0>
+      <Element1 FileName="Samples/PonyCGISample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element1>
+      <Element2 FileName="Samples/PonyConsoleSample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element2>
+      <Element3 FileName="Samples/PonyDaemonSample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element3>
+      <Element4 FileName="Samples/PonyFastCGISample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element4>
+      <Element5 FileName="Samples/PonyISAPISample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element5>
+      <Element6 FileName="Samples/PonyWindowsServiceSample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element6>
+      <Element7 FileName="Samples/PonyVCLSample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element7>
+      <Element8 FileName="Samples/PonySSLSample.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element8>
+    </Elements>
+  </MultiProject>
+</CONFIG>
