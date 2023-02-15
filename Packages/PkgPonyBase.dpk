@@ -1,0 +1,49 @@
+package PkgPonyBase;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  inet;
+
+contains
+  PonyCallback in '..\Sources\Base\PonyCallback.pas',
+  PonyCommons in '..\Sources\Base\PonyCommons.pas',
+  PonyInterfaces in '..\Sources\Base\PonyInterfaces.pas',
+  PonyMime in '..\Sources\Base\PonyMime.pas',
+  PonyModuleInterfaces in '..\Sources\Base\PonyModuleInterfaces.pas',
+  PonyParamsInterfaces in '..\Sources\Base\PonyParamsInterfaces.pas',
+  PonyProc in '..\Sources\Base\PonyProc.pas',
+  PonyRequestInterfaces in '..\Sources\Base\PonyRequestInterfaces.pas',
+  PonyResponseInterfaces in '..\Sources\Base\PonyResponseInterfaces.pas',
+  PonyRouterTreeInterfaces in '..\Sources\Base\PonyRouterTreeInterfaces.pas',
+  PonySession in '..\Sources\Base\PonySession.pas',
+  PonyTypes in '..\Sources\Base\PonyTypes.pas',
+  PonyCoreFiles in '..\Sources\Base\PonyCoreFiles.pas';
+
+end.
