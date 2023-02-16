@@ -1,4 +1,4 @@
-object HorseWebModule: THorseWebModule
+object PonyWebModule: TPonyWebModule
   OldCreateOrder = False
   Actions = <>
   CreateSession = False
