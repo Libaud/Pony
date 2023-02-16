@@ -1,43 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Package Version="5">
-    <Name Value="PkgPonySSLImpl"/>
+    <Name Value="PkgPonySSL"/>
     <Type Value="RunAndDesignTime"/>
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
         <Libraries Value="../../../Library/$(TargetCPU)-$(TargetOS)-$(LCLWidgetType)"/>
-        <OtherUnitFiles Value="../Sources/SSLImpl"/>
+        <OtherUnitFiles Value="../Sources/SSL"/>
         <UnitOutputDirectory Value="../../../Library/$(TargetCPU)-$(TargetOS)-$(LCLWidgetType)"/>
       </SearchPaths>
     </CompilerOptions>
     <Files>
       <Item>
-        <Filename Value="../Sources/SSLImpl/Pony.pas"/>
-        <UnitName Value="Pony"/>
-      </Item>
-      <Item>
-        <Filename Value="../Sources/SSLImpl/PonySSL.pas"/>
-        <UnitName Value="PonySSL"/>
+        <Filename Value="../Sources/SSL/PonySSLHandler.pas"/>
+        <UnitName Value="PonySSLHandler"/>
       </Item>
       <Item>
         <Filename Value="../Sources/SSL/PonySSLHandlerInterfaces.pas"/>
         <UnitName Value="PonySSLHandlerInterfaces"/>
       </Item>
-      <Item>
-        <Filename Value="../Sources/SSL/PonySSLHandler.pas"/>
-        <UnitName Value="PonySSLHandler"/>
-      </Item>
     </Files>
     <RequiredPkgs>
       <Item>
-        <PackageName Value="pl_Indy"/>
-      </Item>
-      <Item>
-        <PackageName Value="PkgPonyModules"/>
-      </Item>
-      <Item>
-        <PackageName Value="PkgPonyImplementationBase"/>
+        <PackageName Value="adFCL"/>
       </Item>
     </RequiredPkgs>
     <UsageOptions>

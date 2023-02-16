@@ -2,13 +2,13 @@
   This source is only used to compile and install the package.
  }
 
-unit PkgPonyWindowsServicesImpl;
+unit PkgPonyHTTPImpl;
 
 {$warn 5023 off : no warning about unused units}
 interface
 
 uses
-  Pony, PonyWindowsServices, TyphonPackageIntf;
+  Pony, PonyHTTP, TyphonPackageIntf;
 
 implementation
 
@@ -17,5 +17,5 @@ begin
 end;
 
 initialization
-  RegisterPackage('PkgPonyWindowsServicesImpl', @Register);
+  RegisterPackage('PkgPonyHTTPImpl', @Register);
 end.
