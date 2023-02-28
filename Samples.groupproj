@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F4522A63-9C30-45D7-AD83-62856356B3B7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Samples\PonyApacheSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyCGISample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyConsoleSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyDaemonSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyFastCGISample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyISAPISample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonySSLSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyVCLSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PonyApacheSample">
+        <MSBuild Projects="Samples\PonyApacheSample.dproj"/>
+    </Target>
+    <Target Name="PonyApacheSample:Clean">
+        <MSBuild Projects="Samples\PonyApacheSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyApacheSample:Make">
+        <MSBuild Projects="Samples\PonyApacheSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyCGISample">
+        <MSBuild Projects="Samples\PonyCGISample.dproj"/>
+    </Target>
+    <Target Name="PonyCGISample:Clean">
+        <MSBuild Projects="Samples\PonyCGISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyCGISample:Make">
+        <MSBuild Projects="Samples\PonyCGISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyConsoleSample">
+        <MSBuild Projects="Samples\PonyConsoleSample.dproj"/>
+    </Target>
+    <Target Name="PonyConsoleSample:Clean">
+        <MSBuild Projects="Samples\PonyConsoleSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyConsoleSample:Make">
+        <MSBuild Projects="Samples\PonyConsoleSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyDaemonSample">
+        <MSBuild Projects="Samples\PonyDaemonSample.dproj"/>
+    </Target>
+    <Target Name="PonyDaemonSample:Clean">
+        <MSBuild Projects="Samples\PonyDaemonSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyDaemonSample:Make">
+        <MSBuild Projects="Samples\PonyDaemonSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyFastCGISample">
+        <MSBuild Projects="Samples\PonyFastCGISample.dproj"/>
+    </Target>
+    <Target Name="PonyFastCGISample:Clean">
+        <MSBuild Projects="Samples\PonyFastCGISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyFastCGISample:Make">
+        <MSBuild Projects="Samples\PonyFastCGISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyISAPISample">
+        <MSBuild Projects="Samples\PonyISAPISample.dproj"/>
+    </Target>
+    <Target Name="PonyISAPISample:Clean">
+        <MSBuild Projects="Samples\PonyISAPISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyISAPISample:Make">
+        <MSBuild Projects="Samples\PonyISAPISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonySSLSample">
+        <MSBuild Projects="Samples\PonySSLSample.dproj"/>
+    </Target>
+    <Target Name="PonySSLSample:Clean">
+        <MSBuild Projects="Samples\PonySSLSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonySSLSample:Make">
+        <MSBuild Projects="Samples\PonySSLSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyVCLSample">
+        <MSBuild Projects="Samples\PonyVCLSample.dproj"/>
+    </Target>
+    <Target Name="PonyVCLSample:Clean">
+        <MSBuild Projects="Samples\PonyVCLSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyVCLSample:Make">
+        <MSBuild Projects="Samples\PonyVCLSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PonyApacheSample;PonyCGISample;PonyConsoleSample;PonyDaemonSample;PonyFastCGISample;PonyISAPISample;PonySSLSample;PonyVCLSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PonyApacheSample:Clean;PonyCGISample:Clean;PonyConsoleSample:Clean;PonyDaemonSample:Clean;PonyFastCGISample:Clean;PonyISAPISample:Clean;PonySSLSample:Clean;PonyVCLSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PonyApacheSample:Make;PonyCGISample:Make;PonyConsoleSample:Make;PonyDaemonSample:Make;PonyFastCGISample:Make;PonyISAPISample:Make;PonySSLSample:Make;PonyVCLSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

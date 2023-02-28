@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="PkgPonyBase"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="../Sources/Base"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files>
+      <Item>
+        <Filename Value="../Sources/Base/PonyCallback.pas"/>
+        <UnitName Value="PonyCallback"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyCommons.pas"/>
+        <UnitName Value="PonyCommons"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyCoreFiles.pas"/>
+        <UnitName Value="PonyCoreFiles"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyInterfaces.pas"/>
+        <UnitName Value="PonyInterfaces"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyMime.pas"/>
+        <UnitName Value="PonyMime"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyModuleInterfaces.pas"/>
+        <UnitName Value="PonyModuleInterfaces"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyParamsInterfaces.pas"/>
+        <UnitName Value="PonyParamsInterfaces"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyProc.pas"/>
+        <UnitName Value="PonyProc"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyRequestInterfaces.pas"/>
+        <UnitName Value="PonyRequestInterfaces"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyResponseInterfaces.pas"/>
+        <UnitName Value="PonyResponseInterfaces"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyRouterTreeInterfaces.pas"/>
+        <UnitName Value="PonyRouterTreeInterfaces"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonySession.pas"/>
+        <UnitName Value="PonySession"/>
+      </Item>
+      <Item>
+        <Filename Value="../Sources/Base/PonyTypes.pas"/>
+        <UnitName Value="PonyTypes"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

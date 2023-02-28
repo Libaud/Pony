@@ -1,0 +1,360 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{133EB678-5D63-4045-B99C-E90991267091}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Packages\PkgPonyBase.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\PkgPonyErrors.dproj">
+            <Dependencies>Packages\PkgPonyBase.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyParams.dproj">
+            <Dependencies>Packages\PkgPonyErrors.dproj;Packages\PkgPonyRTTI.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyRTTI.dproj">
+            <Dependencies>Packages\PkgPonyBase.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyBaseHTTP.dproj">
+            <Dependencies>Packages\PkgPonyBase.dproj;Packages\PkgPonyParams.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyCoreRouter.dproj">
+            <Dependencies>Packages\PkgPonyBaseHTTP.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyCoreRoute.dproj">
+            <Dependencies>Packages\PkgPonyCoreRouter.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyCore.dproj">
+            <Dependencies>Packages\PkgPonyErrors.dproj;Packages\PkgPonyRTTI.dproj;Packages\PkgPonyCoreRouter.dproj;Packages\PkgPonyCoreRoute.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonySSL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\PkgPonyImplementationBase.dproj">
+            <Dependencies>Packages\PkgPonyCore.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyModules.dproj">
+            <Dependencies>Packages\PkgPonyCore.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyApacheImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyDaemonImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyConsoleImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyCGIImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyFastCGIImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyISAPIImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyHTTPImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonySSLImpl.dproj">
+            <Dependencies>Packages\PkgPonyCore.dproj;Packages\PkgPonyImplementationBase.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Packages\PkgPonyWindowsServicesImpl.dproj">
+            <Dependencies>Packages\PkgPonyImplementationBase.dproj;Packages\PkgPonyModules.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonyApacheSample.dproj">
+            <Dependencies>Packages\PkgPonyApacheImpl.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonyCGISample.dproj">
+            <Dependencies>Packages\PkgPonyCGIImpl.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonyConsoleSample.dproj">
+            <Dependencies>Packages\PkgPonyConsoleImpl.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonyDaemonSample.dproj">
+            <Dependencies>Packages\PkgPonyDaemonImpl.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonyFastCGISample.dproj">
+            <Dependencies>Packages\PkgPonyFastCGIImpl.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonyISAPISample.dproj">
+            <Dependencies>Packages\PkgPonyISAPIImpl.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Samples\PonySSLSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\PonyVCLSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PkgPonyBase">
+        <MSBuild Projects="Packages\PkgPonyBase.dproj"/>
+    </Target>
+    <Target Name="PkgPonyBase:Clean">
+        <MSBuild Projects="Packages\PkgPonyBase.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyBase:Make">
+        <MSBuild Projects="Packages\PkgPonyBase.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyErrors" DependsOnTargets="PkgPonyBase">
+        <MSBuild Projects="Packages\PkgPonyErrors.dproj"/>
+    </Target>
+    <Target Name="PkgPonyErrors:Clean" DependsOnTargets="PkgPonyBase:Clean">
+        <MSBuild Projects="Packages\PkgPonyErrors.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyErrors:Make" DependsOnTargets="PkgPonyBase:Make">
+        <MSBuild Projects="Packages\PkgPonyErrors.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyParams" DependsOnTargets="PkgPonyErrors;PkgPonyRTTI">
+        <MSBuild Projects="Packages\PkgPonyParams.dproj"/>
+    </Target>
+    <Target Name="PkgPonyParams:Clean" DependsOnTargets="PkgPonyErrors:Clean;PkgPonyRTTI:Clean">
+        <MSBuild Projects="Packages\PkgPonyParams.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyParams:Make" DependsOnTargets="PkgPonyErrors:Make;PkgPonyRTTI:Make">
+        <MSBuild Projects="Packages\PkgPonyParams.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyRTTI" DependsOnTargets="PkgPonyBase">
+        <MSBuild Projects="Packages\PkgPonyRTTI.dproj"/>
+    </Target>
+    <Target Name="PkgPonyRTTI:Clean" DependsOnTargets="PkgPonyBase:Clean">
+        <MSBuild Projects="Packages\PkgPonyRTTI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyRTTI:Make" DependsOnTargets="PkgPonyBase:Make">
+        <MSBuild Projects="Packages\PkgPonyRTTI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyBaseHTTP" DependsOnTargets="PkgPonyBase;PkgPonyParams">
+        <MSBuild Projects="Packages\PkgPonyBaseHTTP.dproj"/>
+    </Target>
+    <Target Name="PkgPonyBaseHTTP:Clean" DependsOnTargets="PkgPonyBase:Clean;PkgPonyParams:Clean">
+        <MSBuild Projects="Packages\PkgPonyBaseHTTP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyBaseHTTP:Make" DependsOnTargets="PkgPonyBase:Make;PkgPonyParams:Make">
+        <MSBuild Projects="Packages\PkgPonyBaseHTTP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyCoreRouter" DependsOnTargets="PkgPonyBaseHTTP">
+        <MSBuild Projects="Packages\PkgPonyCoreRouter.dproj"/>
+    </Target>
+    <Target Name="PkgPonyCoreRouter:Clean" DependsOnTargets="PkgPonyBaseHTTP:Clean">
+        <MSBuild Projects="Packages\PkgPonyCoreRouter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyCoreRouter:Make" DependsOnTargets="PkgPonyBaseHTTP:Make">
+        <MSBuild Projects="Packages\PkgPonyCoreRouter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyCoreRoute" DependsOnTargets="PkgPonyCoreRouter">
+        <MSBuild Projects="Packages\PkgPonyCoreRoute.dproj"/>
+    </Target>
+    <Target Name="PkgPonyCoreRoute:Clean" DependsOnTargets="PkgPonyCoreRouter:Clean">
+        <MSBuild Projects="Packages\PkgPonyCoreRoute.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyCoreRoute:Make" DependsOnTargets="PkgPonyCoreRouter:Make">
+        <MSBuild Projects="Packages\PkgPonyCoreRoute.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyCore" DependsOnTargets="PkgPonyErrors;PkgPonyRTTI;PkgPonyCoreRouter;PkgPonyCoreRoute">
+        <MSBuild Projects="Packages\PkgPonyCore.dproj"/>
+    </Target>
+    <Target Name="PkgPonyCore:Clean" DependsOnTargets="PkgPonyErrors:Clean;PkgPonyRTTI:Clean;PkgPonyCoreRouter:Clean;PkgPonyCoreRoute:Clean">
+        <MSBuild Projects="Packages\PkgPonyCore.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyCore:Make" DependsOnTargets="PkgPonyErrors:Make;PkgPonyRTTI:Make;PkgPonyCoreRouter:Make;PkgPonyCoreRoute:Make">
+        <MSBuild Projects="Packages\PkgPonyCore.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonySSL">
+        <MSBuild Projects="Packages\PkgPonySSL.dproj"/>
+    </Target>
+    <Target Name="PkgPonySSL:Clean">
+        <MSBuild Projects="Packages\PkgPonySSL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonySSL:Make">
+        <MSBuild Projects="Packages\PkgPonySSL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyImplementationBase" DependsOnTargets="PkgPonyCore">
+        <MSBuild Projects="Packages\PkgPonyImplementationBase.dproj"/>
+    </Target>
+    <Target Name="PkgPonyImplementationBase:Clean" DependsOnTargets="PkgPonyCore:Clean">
+        <MSBuild Projects="Packages\PkgPonyImplementationBase.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyImplementationBase:Make" DependsOnTargets="PkgPonyCore:Make">
+        <MSBuild Projects="Packages\PkgPonyImplementationBase.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyModules" DependsOnTargets="PkgPonyCore">
+        <MSBuild Projects="Packages\PkgPonyModules.dproj"/>
+    </Target>
+    <Target Name="PkgPonyModules:Clean" DependsOnTargets="PkgPonyCore:Clean">
+        <MSBuild Projects="Packages\PkgPonyModules.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyModules:Make" DependsOnTargets="PkgPonyCore:Make">
+        <MSBuild Projects="Packages\PkgPonyModules.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyApacheImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyApacheImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyApacheImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyApacheImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyApacheImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyApacheImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyDaemonImpl" DependsOnTargets="PkgPonyImplementationBase">
+        <MSBuild Projects="Packages\PkgPonyDaemonImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyDaemonImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean">
+        <MSBuild Projects="Packages\PkgPonyDaemonImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyDaemonImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make">
+        <MSBuild Projects="Packages\PkgPonyDaemonImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyConsoleImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyConsoleImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyConsoleImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyConsoleImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyConsoleImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyConsoleImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyCGIImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyCGIImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyCGIImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyCGIImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyCGIImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyCGIImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyFastCGIImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyFastCGIImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyFastCGIImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyFastCGIImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyFastCGIImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyFastCGIImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyISAPIImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyISAPIImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyISAPIImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyISAPIImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyISAPIImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyISAPIImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyHTTPImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyHTTPImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyHTTPImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyHTTPImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyHTTPImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyHTTPImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonySSLImpl" DependsOnTargets="PkgPonyCore;PkgPonyImplementationBase">
+        <MSBuild Projects="Packages\PkgPonySSLImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonySSLImpl:Clean" DependsOnTargets="PkgPonyCore:Clean;PkgPonyImplementationBase:Clean">
+        <MSBuild Projects="Packages\PkgPonySSLImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonySSLImpl:Make" DependsOnTargets="PkgPonyCore:Make;PkgPonyImplementationBase:Make">
+        <MSBuild Projects="Packages\PkgPonySSLImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgPonyWindowsServicesImpl" DependsOnTargets="PkgPonyImplementationBase;PkgPonyModules">
+        <MSBuild Projects="Packages\PkgPonyWindowsServicesImpl.dproj"/>
+    </Target>
+    <Target Name="PkgPonyWindowsServicesImpl:Clean" DependsOnTargets="PkgPonyImplementationBase:Clean;PkgPonyModules:Clean">
+        <MSBuild Projects="Packages\PkgPonyWindowsServicesImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgPonyWindowsServicesImpl:Make" DependsOnTargets="PkgPonyImplementationBase:Make;PkgPonyModules:Make">
+        <MSBuild Projects="Packages\PkgPonyWindowsServicesImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyApacheSample" DependsOnTargets="PkgPonyApacheImpl">
+        <MSBuild Projects="Samples\PonyApacheSample.dproj"/>
+    </Target>
+    <Target Name="PonyApacheSample:Clean" DependsOnTargets="PkgPonyApacheImpl:Clean">
+        <MSBuild Projects="Samples\PonyApacheSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyApacheSample:Make" DependsOnTargets="PkgPonyApacheImpl:Make">
+        <MSBuild Projects="Samples\PonyApacheSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyCGISample" DependsOnTargets="PkgPonyCGIImpl">
+        <MSBuild Projects="Samples\PonyCGISample.dproj"/>
+    </Target>
+    <Target Name="PonyCGISample:Clean" DependsOnTargets="PkgPonyCGIImpl:Clean">
+        <MSBuild Projects="Samples\PonyCGISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyCGISample:Make" DependsOnTargets="PkgPonyCGIImpl:Make">
+        <MSBuild Projects="Samples\PonyCGISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyConsoleSample" DependsOnTargets="PkgPonyConsoleImpl">
+        <MSBuild Projects="Samples\PonyConsoleSample.dproj"/>
+    </Target>
+    <Target Name="PonyConsoleSample:Clean" DependsOnTargets="PkgPonyConsoleImpl:Clean">
+        <MSBuild Projects="Samples\PonyConsoleSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyConsoleSample:Make" DependsOnTargets="PkgPonyConsoleImpl:Make">
+        <MSBuild Projects="Samples\PonyConsoleSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyDaemonSample" DependsOnTargets="PkgPonyDaemonImpl">
+        <MSBuild Projects="Samples\PonyDaemonSample.dproj"/>
+    </Target>
+    <Target Name="PonyDaemonSample:Clean" DependsOnTargets="PkgPonyDaemonImpl:Clean">
+        <MSBuild Projects="Samples\PonyDaemonSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyDaemonSample:Make" DependsOnTargets="PkgPonyDaemonImpl:Make">
+        <MSBuild Projects="Samples\PonyDaemonSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyFastCGISample" DependsOnTargets="PkgPonyFastCGIImpl">
+        <MSBuild Projects="Samples\PonyFastCGISample.dproj"/>
+    </Target>
+    <Target Name="PonyFastCGISample:Clean" DependsOnTargets="PkgPonyFastCGIImpl:Clean">
+        <MSBuild Projects="Samples\PonyFastCGISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyFastCGISample:Make" DependsOnTargets="PkgPonyFastCGIImpl:Make">
+        <MSBuild Projects="Samples\PonyFastCGISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyISAPISample" DependsOnTargets="PkgPonyISAPIImpl">
+        <MSBuild Projects="Samples\PonyISAPISample.dproj"/>
+    </Target>
+    <Target Name="PonyISAPISample:Clean" DependsOnTargets="PkgPonyISAPIImpl:Clean">
+        <MSBuild Projects="Samples\PonyISAPISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyISAPISample:Make" DependsOnTargets="PkgPonyISAPIImpl:Make">
+        <MSBuild Projects="Samples\PonyISAPISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonySSLSample">
+        <MSBuild Projects="Samples\PonySSLSample.dproj"/>
+    </Target>
+    <Target Name="PonySSLSample:Clean">
+        <MSBuild Projects="Samples\PonySSLSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonySSLSample:Make">
+        <MSBuild Projects="Samples\PonySSLSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PonyVCLSample">
+        <MSBuild Projects="Samples\PonyVCLSample.dproj"/>
+    </Target>
+    <Target Name="PonyVCLSample:Clean">
+        <MSBuild Projects="Samples\PonyVCLSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PonyVCLSample:Make">
+        <MSBuild Projects="Samples\PonyVCLSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PkgPonyBase;PkgPonyErrors;PkgPonyParams;PkgPonyRTTI;PkgPonyBaseHTTP;PkgPonyCoreRouter;PkgPonyCoreRoute;PkgPonyCore;PkgPonySSL;PkgPonyImplementationBase;PkgPonyModules;PkgPonyApacheImpl;PkgPonyDaemonImpl;PkgPonyConsoleImpl;PkgPonyCGIImpl;PkgPonyFastCGIImpl;PkgPonyISAPIImpl;PkgPonyHTTPImpl;PkgPonySSLImpl;PkgPonyWindowsServicesImpl;PonyApacheSample;PonyCGISample;PonyConsoleSample;PonyDaemonSample;PonyFastCGISample;PonyISAPISample;PonySSLSample;PonyVCLSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PkgPonyBase:Clean;PkgPonyErrors:Clean;PkgPonyParams:Clean;PkgPonyRTTI:Clean;PkgPonyBaseHTTP:Clean;PkgPonyCoreRouter:Clean;PkgPonyCoreRoute:Clean;PkgPonyCore:Clean;PkgPonySSL:Clean;PkgPonyImplementationBase:Clean;PkgPonyModules:Clean;PkgPonyApacheImpl:Clean;PkgPonyDaemonImpl:Clean;PkgPonyConsoleImpl:Clean;PkgPonyCGIImpl:Clean;PkgPonyFastCGIImpl:Clean;PkgPonyISAPIImpl:Clean;PkgPonyHTTPImpl:Clean;PkgPonySSLImpl:Clean;PkgPonyWindowsServicesImpl:Clean;PonyApacheSample:Clean;PonyCGISample:Clean;PonyConsoleSample:Clean;PonyDaemonSample:Clean;PonyFastCGISample:Clean;PonyISAPISample:Clean;PonySSLSample:Clean;PonyVCLSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PkgPonyBase:Make;PkgPonyErrors:Make;PkgPonyParams:Make;PkgPonyRTTI:Make;PkgPonyBaseHTTP:Make;PkgPonyCoreRouter:Make;PkgPonyCoreRoute:Make;PkgPonyCore:Make;PkgPonySSL:Make;PkgPonyImplementationBase:Make;PkgPonyModules:Make;PkgPonyApacheImpl:Make;PkgPonyDaemonImpl:Make;PkgPonyConsoleImpl:Make;PkgPonyCGIImpl:Make;PkgPonyFastCGIImpl:Make;PkgPonyISAPIImpl:Make;PkgPonyHTTPImpl:Make;PkgPonySSLImpl:Make;PkgPonyWindowsServicesImpl:Make;PonyApacheSample:Make;PonyCGISample:Make;PonyConsoleSample:Make;PonyDaemonSample:Make;PonyFastCGISample:Make;PonyISAPISample:Make;PonySSLSample:Make;PonyVCLSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

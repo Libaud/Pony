@@ -1,4 +1,4 @@
-package PkgPonyApacheImpl;
+package PonyCGIImpl;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -30,9 +30,4 @@ package PkgPonyApacheImpl;
 requires
   rtl;
 
-contains
-  Pony in '..\Sources\ApacheImpl\Pony.pas',
-  PonyApache in '..\Sources\ApacheImpl\PonyApache.pas';
-
 end.
-

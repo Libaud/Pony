@@ -1,4 +1,4 @@
-package PkgPonyApacheImpl;
+package PkgPonySSL;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -28,11 +28,13 @@ package PkgPonyApacheImpl;
 {$IMPLICITBUILD ON}
 
 requires
-  rtl;
+  rtl,
+  IndySystem,
+  IndyProtocols,
+  IndyCore;
 
 contains
-  Pony in '..\Sources\ApacheImpl\Pony.pas',
-  PonyApache in '..\Sources\ApacheImpl\PonyApache.pas';
+  PonySSLHandler in '..\Sources\SSL\PonySSLHandler.pas',
+  PonySSLHandlerInterfaces in '..\Sources\SSL\PonySSLHandlerInterfaces.pas';
 
 end.
-
